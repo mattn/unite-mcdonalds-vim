@@ -19,8 +19,8 @@ function! unite#sources#mcdonalds#open_url(url)
 endfunction
 
 function! s:get_menu()
-  let res = http#get("http://www.mcdonalds.co.jp/menu/regular/index.html")
-  let dom = html#parse(iconv(res.content, 'utf-8', &encoding))
+  let res = webapi#http#get("http://www.mcdonalds.co.jp/menu/regular/index.html")
+  let dom = webapi#html#parse(iconv(res.content, 'utf-8', &encoding))
   for li in dom.find('ul', {'class': 'food-set'}).childNodes('li')
     let url = 'http://www.mcdonalds.co.jp' . li.childNode('a').attr['href']
     let name = li.find('img').attr['alt']
