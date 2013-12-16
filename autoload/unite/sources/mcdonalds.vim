@@ -2,11 +2,11 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 let s:source_hamburger = {
-\ 'name': 'hamburger',
+\ 'name': 'mcdonalds.hamburger',
 \ 'description': 'ハンバーガー',
 \}
 let s:source_drink = {
-\ 'name': 'drink',
+\ 'name': 'mcdonalds.drink',
 \ 'description': 'ドリンク',
 \}
 let s:hamburger = []
